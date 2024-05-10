@@ -55,7 +55,7 @@ func (bf *BF) Execute() {
 		case outByteSymbol:
 			bf.outByte()
 		case inByteSymbol:
-			bf.inByte(0)
+			bf.inByte()
 		case jumpForwardSymbol:
 			bf.jumpForward()
 		case jumpBackwardSymbol:
@@ -129,7 +129,7 @@ func (bf *BF) outByte() {
 }
 
 // Take one byte as input and set the value at the data pointer to that byte
-func (bf *BF) inByte(input byte) {
+func (bf *BF) inByte() {
 	bf.field[bf.dataPointer] = bf.Input[0]
 	bf.Input = bf.Input[1:]
 }
