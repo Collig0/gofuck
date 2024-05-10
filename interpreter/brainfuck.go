@@ -30,6 +30,7 @@ type BF struct {
 	field              [fieldSize]byte // The long array, or "tape," that brainfuck uses to execute code.
 	program            bfProgram       // The program that is currently running
 	CycleCounter       uint            // Keeps count of how many cycles this program has taken to run
+	Input              []byte          // Predefined input for the program
 	Result             []byte          // A copy of the results, identical to what is printed
 }
 
@@ -151,10 +152,10 @@ func (bf *BF) jumpBackward() {
 	if bf.readByte() != 0 {
 		// Seeks for the start of the loop
 		for bf.currentInstruction() != '[' {
+			bf.instructionPointer--
 			if bf.instructionPointer == 0 {
 				log.Fatal("error: couldn't find return point for loop")
 			}
-			bf.instructionPointer--
 		}
 	}
 }
