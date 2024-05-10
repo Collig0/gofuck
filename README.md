@@ -1,6 +1,19 @@
 # gofuck
+
+---
+
 ## A Brainfuck interpreter, written in Go.
 
-This project is intended to be a very bare-bones, as simple as possible brainfuck interpreter.
-It does zero optimizing, and zero tricks to make it more "modern" such as keeping track of loops.
-It is supposed to be a bare-bones turing machine by design. I may make a more advanced version in the future, though.
+- Barebones, as-simple-as-possible turing machine, with no clever tricks to improve speed. The "tape head" must actually move, and may never skip around.
+
+- Created as an exercise in designing elegant, easily maintainable code in Go.
+
+---
+
+## Progress
+
+As of May 10, 2024, this program is able to successfully execute *some* Brainfuck code. Loops are currently not implemented 100% correctly, and so certain programs may not be interpreted correctly.
+
+---
+
+This project was created entirely as a learning exercise, and is currently a work in progress. Until it is to a somewhat-finished state, it is not intended to be used in any critical applications (if, for some reason, you are using Brainfuck in a critical application).
