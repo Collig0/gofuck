@@ -17,3 +17,21 @@ As of May 10, 2024, this program is able to successfully execute *some* Brainfuc
 ---
 
 This project was created entirely as a learning exercise, and is currently a work in progress. Until it is to a somewhat-finished state, it is not intended to be used in any critical applications (if, for some reason, you are using Brainfuck in a critical application).
+
+---
+
+## Building & Running
+
+To build and install for your OS, compile like any other Go program:
+
+```
+go build github.com/Collig0/gofuck
+```
+
+Then run the executable produced.
+
+Alternatively, to just run the program without saving an executable:
+
+```
+go run github.com/Collig0/gofuck
+```
