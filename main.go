@@ -10,10 +10,12 @@ import (
 )
 
 var bfProgramFile string
+var bfInput = flag.String("input", "", "Predetermined input for the Brainfuck program")
 
 func main() {
 	brainfuckProgram := new(interpreter.BF)
 	brainfuckProgram.LoadProgram(bfProgramFile)
+	brainfuckProgram.Input = []byte(*bfInput)
 	brainfuckProgram.Execute()
 	print("\n")
 	fmt.Println("Result:", brainfuckProgram.Result)
