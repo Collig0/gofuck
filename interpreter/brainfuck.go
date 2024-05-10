@@ -1,7 +1,6 @@
 package interpreter
 
 import (
-	"errors"
 	"log"
 )
 
@@ -131,8 +130,8 @@ func (bf *BF) outByte() {
 
 // Take one byte as input and set the value at the data pointer to that byte
 func (bf *BF) inByte(input byte) {
-	// Not implemented yet. Do not use!
-	panic(errors.New("used unimplemented code"))
+	bf.field[bf.dataPointer] = bf.Input[0]
+	bf.Input = bf.Input[1:]
 }
 
 // If the byte at the data pointer is zero, jump to the command after the matching ]
