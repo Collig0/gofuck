@@ -18,7 +18,7 @@ func main() {
 	brainfuckProgram.Input = []byte(*bfInput)
 	brainfuckProgram.Execute()
 	print("\n")
-	fmt.Println("Result:", brainfuckProgram.Result)
+	fmt.Println("Resulting bytes:", brainfuckProgram.Result)
 	fmt.Printf("Finished in %v cycles.\n", brainfuckProgram.CycleCounter)
 }
 
